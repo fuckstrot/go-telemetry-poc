@@ -1,4 +1,4 @@
-# 🖥️ Система Мониторинга Телеметрии
+# 🖥️ Прототип Система Мониторинга Телеметрии
 
 [![Go Version](https://img.shields.io/badge/go-1.18%2B-blue)](https://golang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
