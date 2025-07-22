@@ -1,0 +1,711 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"net"
+	"os"
+	"os/signal"
+	"runtime"
+	"sort"
+	"strings"
+	"sync"
+	"syscall"
+	"time"
+
+	MQTT "github.com/eclipse/paho.mqtt.golang"
+	"github.com/shirou/gopsutil/v3/cpu"
+	"github.com/shirou/gopsutil/v3/disk"
+	"github.com/shirou/gopsutil/v3/host"
+	"github.com/shirou/gopsutil/v3/mem"
+	gopsutilnet "github.com/shirou/gopsutil/v3/net"
+	"github.com/shirou/gopsutil/v3/process"
+)
+
+// ================= Configuration =================
+type Config struct {
+	BrokerAddress      string   `json:"broker_address"`
+	MQTTTopic          string   `json:"mqtt_topic"`
+	CollectionInterval int      `json:"collection_interval"`
+	MaxProcesses       int      `json:"max_processes"`
+	CriticalFiles      []string `json:"critical_files"`
+	LogFiles           struct {
+		SystemLog string `json:"system_log"`
+		EventLog  string `json:"event_log"`
+	} `json:"log_files"`
+}
+
+var config Config
+
+func loadConfig() error {
+	configFile, err := os.Open("config.json")
+	if err != nil {
+		return fmt.Errorf("failed to open config file: %v", err)
+	}
+	defer configFile.Close()
+
+	decoder := json.NewDecoder(configFile)
+	if err := decoder.Decode(&config); err != nil {
+		return fmt.Errorf("failed to decode config: %v", err)
+	}
+
+	// Validate configuration
+	if config.CollectionInterval <= 0 {
+		config.CollectionInterval = 10
+	}
+	if config.MaxProcesses <= 0 {
+		config.MaxProcesses = 50
+	}
+	if config.LogFiles.SystemLog == "" {
+		config.LogFiles.SystemLog = "telemetry_system.log"
+	}
+	if config.LogFiles.EventLog == "" {
+		config.LogFiles.EventLog = "telemetry_events.log"
+	}
+
+	return nil
+}
+
+// ================= Logger Setup =================
+var (
+	logger       *log.Logger
+	logFile      *os.File
+	eventLogger  *log.Logger
+	eventLogFile *os.File
+)
+
+func initLogger() {
+	var err error
+	// Main system log
+	logFile, err = os.OpenFile(config.LogFiles.SystemLog, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("Failed to open log file: %v", err)
+	}
+	logger = log.New(logFile, "", log.Ldate|log.Ltime|log.Lshortfile)
+
+	// Telemetry events log
+	eventLogFile, err = os.OpenFile(config.LogFiles.EventLog, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("Failed to open event log file: %v", err)
+	}
+	eventLogger = log.New(eventLogFile, "", log.Ldate|log.Ltime)
+}
+
+func logInfo(format string, v ...interface{}) {
+	msg := fmt.Sprintf(format, v...)
+	logger.Println("[INFO] " + msg)
+	fmt.Println("[INFO] " + msg)
+}
+
+func logError(format string, v ...interface{}) {
+	msg := fmt.Sprintf(format, v...)
+	logger.Println("[ERROR] " + msg)
+	fmt.Println("[ERROR] " + msg)
+}
+
+func logFatal(format string, v ...interface{}) {
+	msg := fmt.Sprintf(format, v...)
+	logger.Println("[FATAL] " + msg)
+	fmt.Println("[FATAL] " + msg)
+	os.Exit(1)
+}
+
+func logEvent(format string, v ...interface{}) {
+	msg := fmt.Sprintf(format, v...)
+	eventLogger.Println("[EVENT] " + msg)
+	fmt.Println("[EVENT] " + msg)
+}
+
+// ================= Telemetry Types =================
+type SystemTelemetry struct {
+	Timestamp     int64         `json:"timestamp"`
+	SystemInfo    SystemInfo    `json:"system_info"`
+	Hardware      HardwareStats `json:"hardware"`
+	Network       NetworkStats  `json:"network"`
+	Processes     []ProcessInfo `json:"processes"`
+	CriticalFiles []FileInfo    `json:"critical_files,omitempty"`
+}
+
+type SystemInfo struct {
+	Hostname      string   `json:"hostname"`
+	OS            string   `json:"os"`
+	Platform      string   `json:"platform"`
+	KernelVersion string   `json:"kernel_version"`
+	Uptime        uint64   `json:"uptime"`
+	IPAddresses   []string `json:"ip_addresses"`
+	NumCPU        int      `json:"num_cpu"`
+	GoVersion     string   `json:"go_version"`
+}
+
+type HardwareStats struct {
+	CPUUsage         float64 `json:"cpu_usage"`
+	MemoryUsage      float64 `json:"memory_usage"`
+	MemoryUsedBytes  uint64  `json:"memory_used_bytes"`
+	MemoryTotalBytes uint64  `json:"memory_total_bytes"`
+	DiskUsage        float64 `json:"disk_usage"`
+	DiskUsedBytes    uint64  `json:"disk_used_bytes"`
+	DiskTotalBytes   uint64  `json:"disk_total_bytes"`
+	Temperature      float64 `json:"temperature,omitempty"`
+}
+
+type NetworkStats struct {
+	Interfaces     []NetworkInterface `json:"interfaces"`
+	TotalBytesSent uint64             `json:"total_bytes_sent"`
+	TotalBytesRecv uint64             `json:"total_bytes_recv"`
+	Connections    []ConnectionInfo   `json:"connections"`
+}
+
+type NetworkInterface struct {
+	Name      string   `json:"name"`
+	IPs       []string `json:"ips"`
+	BytesSent uint64   `json:"bytes_sent"`
+	BytesRecv uint64   `json:"bytes_recv"`
+	MAC       string   `json:"mac,omitempty"`
+}
+
+type ConnectionInfo struct {
+	Protocol string `json:"protocol"`
+	Local    string `json:"local"`
+	Remote   string `json:"remote"`
+	Status   string `json:"status"`
+	PID      int32  `json:"pid,omitempty"`
+}
+
+type ProcessInfo struct {
+	PID           int32    `json:"pid"`
+	Name          string   `json:"name"`
+	CommandLine   string   `json:"command_line,omitempty"`
+	CPUPercent    float64  `json:"cpu_percent"`
+	MemoryPercent float32  `json:"memory_percent"`
+	MemoryRSS     uint64   `json:"memory_rss"`
+	MemoryVMS     uint64   `json:"memory_vms"`
+	Status        string   `json:"status"`
+	CreateTime    int64    `json:"create_time"`
+	NumThreads    int32    `json:"num_threads"`
+	NumFDs        int32    `json:"num_fds,omitempty"`
+	IOReadBytes   uint64   `json:"io_read_bytes"`
+	IOWriteBytes  uint64   `json:"io_write_bytes"`
+	OpenFiles     []string `json:"open_files,omitempty"`
+}
+
+type FileInfo struct {
+	Path     string `json:"path"`
+	Size     uint64 `json:"size"`
+	Modified int64  `json:"modified"`
+}
+
+const (
+	brokerAddress = "tcp://localhost:1883"
+	mqttTopic     = "telemetry/fullsystem"
+	interval      = 10 * time.Second
+	maxProcesses  = 50
+)
+
+var (
+	mqttClient MQTT.Client
+	wg         sync.WaitGroup
+)
+
+// ================= Helper Functions =================
+func getHostname() string {
+	name, err := os.Hostname()
+	if err != nil {
+		logError("Failed to get hostname: %v", err)
+		return "unknown"
+	}
+	return name
+}
+
+func getIPAddresses() []string {
+	var ips []string
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		logError("Failed to get IP addresses: %v", err)
+		return ips
+	}
+
+	for _, addr := range addrs {
+		if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+			if ipnet.IP.To4() != nil {
+				ips = append(ips, ipnet.IP.String())
+			}
+		}
+	}
+	return ips
+}
+
+func formatDuration(seconds uint64) string {
+	d := time.Duration(seconds) * time.Second
+	return fmt.Sprintf("%02dd %02dh %02dm %02ds",
+		int(d.Hours()/24),
+		int(d.Hours())%24,
+		int(d.Minutes())%60,
+		int(d.Seconds())%60)
+}
+
+func formatBytes(bytes uint64) string {
+	const unit = 1024
+	if bytes < unit {
+		return fmt.Sprintf("%d B", bytes)
+	}
+	div, exp := uint64(unit), 0
+	for n := bytes / unit; n >= unit; n /= unit {
+		div *= unit
+		exp++
+	}
+	return fmt.Sprintf("%.1f %cB", float64(bytes)/float64(div), "KMGTPE"[exp])
+}
+
+// ================= Main Function =================
+func main() {
+	// Load configuration
+	if err := loadConfig(); err != nil {
+		log.Fatalf("Configuration error: %v", err)
+	}
+
+	// Initialize logging
+	initLogger()
+	defer func() {
+		if logFile != nil {
+			logFile.Close()
+		}
+		if eventLogFile != nil {
+			eventLogFile.Close()
+		}
+	}()
+
+	logInfo("Starting telemetry system")
+	logInfo("Runtime: Go %s", runtime.Version())
+	logInfo("Configuration loaded: %+v", config)
+
+	// Handle graceful shutdown
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+
+	// Start both publisher and subscriber
+	wg.Add(2)
+	go startPublisher()
+	go startSubscriber()
+
+	// Wait for shutdown signal
+	<-quit
+	logInfo("Shutting down...")
+	if mqttClient != nil {
+		mqttClient.Disconnect(250)
+	}
+	wg.Wait()
+	logInfo("Shutdown complete")
+}
+
+// ================= Publisher =================
+func startPublisher() {
+	defer wg.Done()
+	logInfo("Publisher starting")
+
+	opts := MQTT.NewClientOptions().AddBroker(config.BrokerAddress)
+	opts.SetClientID("telemetry-publisher-" + getHostname())
+
+	mqttClient = MQTT.NewClient(opts)
+	if token := mqttClient.Connect(); token.Wait() && token.Error() != nil {
+		logFatal("MQTT connection failed: %v", token.Error())
+	}
+	logInfo("Connected to MQTT broker at %s", config.BrokerAddress)
+
+	interval := time.Duration(config.CollectionInterval) * time.Second
+	ticker := time.NewTicker(interval)
+	defer ticker.Stop()
+
+	for {
+		select {
+		case <-ticker.C:
+			logInfo("Collecting and publishing telemetry")
+			publishSystemTelemetry()
+		}
+	}
+}
+
+func publishSystemTelemetry() {
+	data := SystemTelemetry{
+		Timestamp: time.Now().Unix(),
+	}
+
+	// Initialize nested structs
+	data.SystemInfo = SystemInfo{}
+	data.Hardware = HardwareStats{}
+	data.Network = NetworkStats{}
+
+	// Collect all metrics
+	collectSystemInfo(&data)
+	collectHardwareStats(&data)
+	collectNetworkStats(&data)
+	collectProcessInfo(&data)
+	collectCriticalFiles(&data)
+
+	jsonData, err := json.Marshal(data)
+	if err != nil {
+		logError("Failed to marshal telemetry: %v", err)
+		return
+	}
+
+	token := mqttClient.Publish(config.MQTTTopic, 1, false, jsonData)
+	token.Wait()
+
+	if token.Error() != nil {
+		logError("MQTT publish failed: %v", token.Error())
+	} else {
+		logInfo("Telemetry published successfully")
+	}
+}
+
+// ================= Collection Functions =================
+func collectSystemInfo(data *SystemTelemetry) {
+	hostInfo, err := host.Info()
+	if err != nil {
+		logError("Failed to get host info: %v", err)
+		return
+	}
+
+	data.SystemInfo = SystemInfo{
+		Hostname:      hostInfo.Hostname,
+		OS:            hostInfo.OS,
+		Platform:      hostInfo.Platform,
+		KernelVersion: hostInfo.KernelVersion,
+		Uptime:        hostInfo.Uptime,
+		IPAddresses:   getIPAddresses(),
+		NumCPU:        runtime.NumCPU(),
+		GoVersion:     runtime.Version(),
+	}
+	logInfo("Collected system info")
+}
+
+func collectHardwareStats(data *SystemTelemetry) {
+	// CPU
+	if cpuPercent, err := cpu.Percent(0, false); err == nil {
+		data.Hardware.CPUUsage = cpuPercent[0]
+	} else {
+		logError("Failed to get CPU usage: %v", err)
+	}
+
+	// Memory
+	if vmem, err := mem.VirtualMemory(); err == nil {
+		data.Hardware.MemoryUsage = vmem.UsedPercent
+		data.Hardware.MemoryUsedBytes = vmem.Used
+		data.Hardware.MemoryTotalBytes = vmem.Total
+	} else {
+		logError("Failed to get memory usage: %v", err)
+	}
+
+	// Disk
+	if diskUsage, err := disk.Usage("/"); err == nil {
+		data.Hardware.DiskUsage = diskUsage.UsedPercent
+		data.Hardware.DiskUsedBytes = diskUsage.Used
+		data.Hardware.DiskTotalBytes = diskUsage.Total
+	} else {
+		logError("Failed to get disk usage: %v", err)
+	}
+
+	// Temperature (Linux only)
+	if temps, err := host.SensorsTemperatures(); err == nil && len(temps) > 0 {
+		data.Hardware.Temperature = temps[0].Temperature
+	}
+	logInfo("Collected hardware stats")
+}
+
+func collectNetworkStats(data *SystemTelemetry) {
+	// Interfaces
+	interfaces, err := gopsutilnet.Interfaces()
+	if err != nil {
+		logError("Failed to get network interfaces: %v", err)
+	}
+
+	ioCounters, err := gopsutilnet.IOCounters(true)
+	if err != nil {
+		logError("Failed to get network I/O counters: %v", err)
+	}
+
+	for _, iface := range interfaces {
+		var ips []string
+		for _, addr := range iface.Addrs {
+			ips = append(ips, addr.Addr)
+		}
+
+		var bytesSent, bytesRecv uint64
+		for _, io := range ioCounters {
+			if io.Name == iface.Name {
+				bytesSent = io.BytesSent
+				bytesRecv = io.BytesRecv
+				data.Network.TotalBytesSent += io.BytesSent
+				data.Network.TotalBytesRecv += io.BytesRecv
+				break
+			}
+		}
+
+		data.Network.Interfaces = append(data.Network.Interfaces, NetworkInterface{
+			Name:      iface.Name,
+			IPs:       ips,
+			BytesSent: bytesSent,
+			BytesRecv: bytesRecv,
+			MAC:       iface.HardwareAddr,
+		})
+	}
+
+	// Connections
+	if conns, err := gopsutilnet.Connections("all"); err == nil {
+		for _, conn := range conns {
+			if conn.Status == "" {
+				continue
+			}
+
+			protocol := "unknown"
+			switch conn.Type {
+			case 1: // TCP
+				protocol = "tcp"
+			case 2: // UDP
+				protocol = "udp"
+			case 3: // UNIX
+				protocol = "unix"
+			}
+
+			data.Network.Connections = append(data.Network.Connections, ConnectionInfo{
+				Protocol: protocol,
+				Local:    fmt.Sprintf("%s:%d", conn.Laddr.IP, conn.Laddr.Port),
+				Remote:   fmt.Sprintf("%s:%d", conn.Raddr.IP, conn.Raddr.Port),
+				Status:   conn.Status,
+				PID:      conn.Pid,
+			})
+		}
+	}
+	logInfo("Collected network stats")
+}
+
+func collectProcessInfo(data *SystemTelemetry) {
+	processes, err := process.Processes()
+	if err != nil {
+		logError("Failed to get processes: %v", err)
+		return
+	}
+
+	sort.Slice(processes, func(i, j int) bool {
+		cpu1, _ := processes[i].CPUPercent()
+		cpu2, _ := processes[j].CPUPercent()
+		return cpu1 > cpu2
+	})
+
+	processCount := 0
+	for i, p := range processes {
+		if i >= config.MaxProcesses {
+			break
+		}
+
+		if p == nil {
+			continue
+		}
+
+		// Safely collect process information
+		name, _ := p.Name()
+		cmdline, _ := p.Cmdline()
+		cpuPercent, _ := p.CPUPercent()
+		memPercent, _ := p.MemoryPercent()
+
+		var memRSS, memVMS uint64
+		if memInfo, err := p.MemoryInfo(); err == nil && memInfo != nil {
+			memRSS = memInfo.RSS
+			memVMS = memInfo.VMS
+		}
+
+		status, _ := p.Status()
+		createTime, _ := p.CreateTime()
+		threads, _ := p.NumThreads()
+		fds, _ := p.NumFDs()
+
+		var ioRead, ioWrite uint64
+		if ioCounters, err := p.IOCounters(); err == nil {
+			ioRead = ioCounters.ReadBytes
+			ioWrite = ioCounters.WriteBytes
+		}
+
+		var openFiles []string
+		if files, err := p.OpenFiles(); err == nil {
+			for _, f := range files {
+				openFiles = append(openFiles, f.Path)
+			}
+		}
+
+		data.Processes = append(data.Processes, ProcessInfo{
+			PID:           p.Pid,
+			Name:          name,
+			CommandLine:   cmdline,
+			CPUPercent:    cpuPercent,
+			MemoryPercent: memPercent,
+			MemoryRSS:     memRSS,
+			MemoryVMS:     memVMS,
+			Status:        strings.Join(status, ","),
+			CreateTime:    createTime,
+			NumThreads:    threads,
+			NumFDs:        fds,
+			IOReadBytes:   ioRead,
+			IOWriteBytes:  ioWrite,
+			OpenFiles:     openFiles,
+		})
+		processCount++
+	}
+	logInfo("Collected %d processes", processCount)
+}
+
+func collectCriticalFiles(data *SystemTelemetry) {
+	for _, path := range config.CriticalFiles {
+		if fileInfo, err := os.Stat(path); err == nil {
+			data.CriticalFiles = append(data.CriticalFiles, FileInfo{
+				Path:     path,
+				Size:     uint64(fileInfo.Size()),
+				Modified: fileInfo.ModTime().Unix(),
+			})
+		}
+	}
+	logInfo("Collected critical files info")
+}
+
+// ================= Subscriber =================
+func startSubscriber() {
+	defer wg.Done()
+	logInfo("Subscriber starting")
+
+	opts := MQTT.NewClientOptions().AddBroker(config.BrokerAddress)
+	opts.SetClientID("telemetry-subscriber-" + getHostname())
+	client := MQTT.NewClient(opts)
+	if token := client.Connect(); token.Wait() && token.Error() != nil {
+		logFatal("Subscriber MQTT connection failed: %v", token.Error())
+	}
+	logInfo("Subscriber connected to MQTT broker")
+
+	client.Subscribe(config.MQTTTopic, 1, func(client MQTT.Client, msg MQTT.Message) {
+		logInfo("Received telemetry message")
+		var data SystemTelemetry
+		if err := json.Unmarshal(msg.Payload(), &data); err != nil {
+			logError("Failed to unmarshal telemetry: %v", err)
+			return
+		}
+
+		// Log detailed telemetry to event log
+		eventLogger.Println("=== Telemetry Event ===")
+		eventLogger.Printf("Host: %s (%s)\n", data.SystemInfo.Hostname, strings.Join(data.SystemInfo.IPAddresses, ", "))
+		eventLogger.Printf("Time: %s\n", time.Unix(data.Timestamp, 0).Format(time.RFC3339))
+		eventLogger.Printf("OS: %s %s\n", data.SystemInfo.Platform, data.SystemInfo.OS)
+		eventLogger.Printf("Uptime: %s\n", formatDuration(data.SystemInfo.Uptime))
+		eventLogger.Printf("CPU: %.2f%%\n", data.Hardware.CPUUsage)
+		eventLogger.Printf("Memory: %.2f%% (%s / %s)\n",
+			data.Hardware.MemoryUsage,
+			formatBytes(data.Hardware.MemoryUsedBytes),
+			formatBytes(data.Hardware.MemoryTotalBytes))
+		eventLogger.Printf("Disk: %.2f%% (%s / %s)\n",
+			data.Hardware.DiskUsage,
+			formatBytes(data.Hardware.DiskUsedBytes),
+			formatBytes(data.Hardware.DiskTotalBytes))
+		eventLogger.Printf("Network: ↑ %.2fMB ↓ %.2fMB\n",
+			float64(data.Network.TotalBytesSent)/1024/1024,
+			float64(data.Network.TotalBytesRecv)/1024/1024)
+
+		if len(data.Processes) > 0 {
+			eventLogger.Println("Top Processes:")
+			for i, p := range data.Processes {
+				if i >= 5 {
+					break
+				}
+				eventLogger.Printf("- %s (PID: %d, CPU: %.2f%%, MEM: %.2f%%)\n",
+					p.Name, p.PID, p.CPUPercent, p.MemoryPercent)
+			}
+		}
+
+		eventLogger.Println("=======================")
+
+		// Log summary to event logger
+		logEvent("Telemetry from %s: CPU %.2f%%, MEM %.2f%% (%s/%s), DISK %.2f%% (%s/%s), NET ↑%.2fMB ↓%.2fMB",
+			data.SystemInfo.Hostname,
+			data.Hardware.CPUUsage,
+			data.Hardware.MemoryUsage,
+			formatBytes(data.Hardware.MemoryUsedBytes),
+			formatBytes(data.Hardware.MemoryTotalBytes),
+			data.Hardware.DiskUsage,
+			formatBytes(data.Hardware.DiskUsedBytes),
+			formatBytes(data.Hardware.DiskTotalBytes),
+			float64(data.Network.TotalBytesSent)/1024/1024,
+			float64(data.Network.TotalBytesRecv)/1024/1024)
+
+		printTelemetryReport(data)
+	})
+
+	logInfo("Subscriber waiting for telemetry...")
+	select {} // Block forever
+}
+
+func printTelemetryReport(data SystemTelemetry) {
+	fmt.Printf("\n=== System Telemetry Report ===\n")
+	fmt.Printf("Timestamp: %s\n", time.Unix(data.Timestamp, 0).Format(time.RFC3339))
+
+	// System Info
+	fmt.Printf("\n[System]\n")
+	fmt.Printf("Hostname: %s\n", data.SystemInfo.Hostname)
+	fmt.Printf("OS: %s %s (Kernel: %s)\n", data.SystemInfo.Platform, data.SystemInfo.OS, data.SystemInfo.KernelVersion)
+	fmt.Printf("Uptime: %s\n", formatDuration(data.SystemInfo.Uptime))
+	fmt.Printf("IPs: %s\n", strings.Join(data.SystemInfo.IPAddresses, ", "))
+	fmt.Printf("CPUs: %d | Go: %s\n", data.SystemInfo.NumCPU, data.SystemInfo.GoVersion)
+
+	// Hardware
+	fmt.Printf("\n[Hardware]\n")
+	fmt.Printf("CPU: %.2f%%\n", data.Hardware.CPUUsage)
+	fmt.Printf("Memory: %.2f%% (%s / %s)\n",
+		data.Hardware.MemoryUsage,
+		formatBytes(data.Hardware.MemoryUsedBytes),
+		formatBytes(data.Hardware.MemoryTotalBytes))
+	fmt.Printf("Disk: %.2f%% (%s / %s)\n",
+		data.Hardware.DiskUsage,
+		formatBytes(data.Hardware.DiskUsedBytes),
+		formatBytes(data.Hardware.DiskTotalBytes))
+	if data.Hardware.Temperature > 0 {
+		fmt.Printf("Temperature: %.1f°C\n", data.Hardware.Temperature)
+	}
+
+	// Network
+	fmt.Printf("\n[Network]\n")
+	fmt.Printf("Total Traffic: ↑ %.2fMB ↓ %.2fMB\n",
+		float64(data.Network.TotalBytesSent)/1024/1024,
+		float64(data.Network.TotalBytesRecv)/1024/1024)
+
+	if len(data.Network.Connections) > 0 {
+		fmt.Printf("\nActive Connections (%d):\n", len(data.Network.Connections))
+		for _, conn := range data.Network.Connections {
+			fmt.Printf("- %5s %-20s → %-20s [%s]\n",
+				conn.Protocol, conn.Local, conn.Remote, conn.Status)
+		}
+	}
+
+	// Processes
+	if len(data.Processes) > 0 {
+		fmt.Printf("\n[Top %d Processes]\n", len(data.Processes))
+		fmt.Printf("%6s %-20s %6s %6s %8s %8s %10s %s\n",
+			"PID", "Name", "CPU%", "MEM%", "RSS", "Threads", "IO", "Status")
+		for _, p := range data.Processes {
+			fmt.Printf("%6d %-20.20s %6.1f %6.1f %8s %8d %10s %s\n",
+				p.PID,
+				p.Name,
+				p.CPUPercent,
+				p.MemoryPercent,
+				formatBytes(p.MemoryRSS),
+				p.NumThreads,
+				fmt.Sprintf("↑%s↓%s", formatBytes(p.IOWriteBytes), formatBytes(p.IOReadBytes)),
+				p.Status)
+		}
+	}
+
+	// Critical Files
+	if len(data.CriticalFiles) > 0 {
+		fmt.Printf("\n[Critical Files]\n")
+		for _, f := range data.CriticalFiles {
+			fmt.Printf("- %s (%s, modified %s)\n",
+				f.Path,
+				formatBytes(f.Size),
+				time.Unix(f.Modified, 0).Format(time.RFC3339))
+		}
+	}
+}

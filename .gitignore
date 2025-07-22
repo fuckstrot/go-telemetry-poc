@@ -1,0 +1,9 @@
+# Binaries
+/bin/
+/dist/
+
+# Dependency directories
+/vendor/
+/pkg/
+# VS Code settings
+.vscode/

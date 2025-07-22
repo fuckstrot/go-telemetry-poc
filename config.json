@@ -1,0 +1,15 @@
+{
+  "broker_address": "tcp://localhost:1883",
+  "mqtt_topic": "telemetry/fullsystem",
+  "collection_interval": 10,
+  "max_processes": 50,
+  "critical_files": [
+    "/etc/passwd",
+    "/etc/hosts",
+    "C:\\Windows\\System32\\drivers\\etc\\hosts"
+  ],
+  "log_files": {
+    "system_log": "telemetry_system.log",
+    "event_log": "telemetry_events.log"
+  }
+}

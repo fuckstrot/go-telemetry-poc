@@ -1,0 +1,1139 @@
+2025/07/22 01:52:31 main.go:44: [INFO] Starting telemetry system
+2025/07/22 01:52:31 main.go:44: [INFO] Runtime: Go go1.24.5
+2025/07/22 01:52:31 main.go:44: [INFO] Subscriber starting
+2025/07/22 01:52:31 main.go:44: [INFO] Publisher starting
+2025/07/22 01:52:31 main.go:44: [INFO] Subscriber connected to MQTT broker
+2025/07/22 01:52:31 main.go:44: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 01:52:31 main.go:44: [INFO] Subscriber waiting for telemetry...
+2025/07/22 01:52:41 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:52:41 main.go:44: [INFO] Collected system info
+2025/07/22 01:52:41 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:52:41 main.go:44: [INFO] Collected network stats
+2025/07/22 01:52:43 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:52:43 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:52:43 main.go:44: [INFO] Received telemetry message
+2025/07/22 01:52:43 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 01:52:51 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:52:51 main.go:44: [INFO] Collected system info
+2025/07/22 01:52:51 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:52:51 main.go:44: [INFO] Collected network stats
+2025/07/22 01:52:53 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:52:53 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:52:53 main.go:44: [INFO] Received telemetry message
+2025/07/22 01:52:53 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 01:53:01 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:01 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:01 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:01 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:03 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:03 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:03 main.go:44: [INFO] Received telemetry message
+2025/07/22 01:53:03 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 01:53:11 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:11 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:11 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:11 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:13 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:13 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:13 main.go:44: [INFO] Received telemetry message
+2025/07/22 01:53:13 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 01:53:21 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:21 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:21 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:21 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:23 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:23 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:23 main.go:44: [INFO] Received telemetry message
+2025/07/22 01:53:23 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 01:53:31 main.go:44: [INFO] Shutting down...
+2025/07/22 01:53:31 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:31 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:31 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:31 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:33 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:33 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:33 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:53:41 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:41 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:41 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:41 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:43 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:43 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:43 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:53:51 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:53:51 main.go:44: [INFO] Collected system info
+2025/07/22 01:53:51 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:53:51 main.go:44: [INFO] Collected network stats
+2025/07/22 01:53:53 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:53:53 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:53:53 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:01 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:01 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:01 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:01 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:03 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:03 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:03 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:11 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:11 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:11 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:11 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:13 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:13 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:13 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:21 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:21 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:21 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:21 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:23 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:23 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:23 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:31 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:31 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:31 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:31 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:33 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:33 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:33 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:41 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:41 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:41 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:41 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:43 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:43 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:43 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:54:51 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:54:51 main.go:44: [INFO] Collected system info
+2025/07/22 01:54:51 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:54:51 main.go:44: [INFO] Collected network stats
+2025/07/22 01:54:53 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:54:53 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:54:53 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:55:01 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:55:01 main.go:44: [INFO] Collected system info
+2025/07/22 01:55:01 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:55:01 main.go:44: [INFO] Collected network stats
+2025/07/22 01:55:03 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:55:03 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:55:03 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 01:55:11 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 01:55:11 main.go:44: [INFO] Collected system info
+2025/07/22 01:55:11 main.go:44: [INFO] Collected hardware stats
+2025/07/22 01:55:11 main.go:44: [INFO] Collected network stats
+2025/07/22 01:55:13 main.go:44: [INFO] Collected 50 processes
+2025/07/22 01:55:13 main.go:44: [INFO] Collected critical files info
+2025/07/22 01:55:13 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:07:17 main.go:44: [INFO] Starting telemetry system
+2025/07/22 02:07:17 main.go:44: [INFO] Runtime: Go go1.24.5
+2025/07/22 02:07:17 main.go:44: [INFO] Subscriber starting
+2025/07/22 02:07:17 main.go:44: [INFO] Publisher starting
+2025/07/22 02:07:17 main.go:44: [INFO] Subscriber connected to MQTT broker
+2025/07/22 02:07:17 main.go:44: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 02:07:17 main.go:44: [INFO] Subscriber waiting for telemetry...
+2025/07/22 02:07:27 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:07:27 main.go:44: [INFO] Collected system info
+2025/07/22 02:07:27 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:07:27 main.go:44: [INFO] Collected network stats
+2025/07/22 02:07:29 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:07:29 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:07:29 main.go:44: [INFO] Received telemetry message
+2025/07/22 02:07:29 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 02:07:37 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:07:37 main.go:44: [INFO] Collected system info
+2025/07/22 02:07:37 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:07:37 main.go:44: [INFO] Collected network stats
+2025/07/22 02:07:39 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:07:39 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:07:39 main.go:44: [INFO] Received telemetry message
+2025/07/22 02:07:39 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 02:07:43 main.go:44: [INFO] Shutting down...
+2025/07/22 02:07:47 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:07:47 main.go:44: [INFO] Collected system info
+2025/07/22 02:07:47 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:07:47 main.go:44: [INFO] Collected network stats
+2025/07/22 02:07:49 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:07:49 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:07:49 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:07:57 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:07:57 main.go:44: [INFO] Collected system info
+2025/07/22 02:07:57 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:07:57 main.go:44: [INFO] Collected network stats
+2025/07/22 02:07:58 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:07:58 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:07:58 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:08:07 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:08:07 main.go:44: [INFO] Collected system info
+2025/07/22 02:08:07 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:08:07 main.go:44: [INFO] Collected network stats
+2025/07/22 02:08:09 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:08:09 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:08:09 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:08:17 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:08:17 main.go:44: [INFO] Collected system info
+2025/07/22 02:08:17 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:08:17 main.go:44: [INFO] Collected network stats
+2025/07/22 02:08:18 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:08:18 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:08:18 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:09:02 main.go:44: [INFO] Starting telemetry system
+2025/07/22 02:09:02 main.go:44: [INFO] Runtime: Go go1.24.5
+2025/07/22 02:09:02 main.go:44: [INFO] Subscriber starting
+2025/07/22 02:09:02 main.go:44: [INFO] Publisher starting
+2025/07/22 02:09:02 main.go:44: [INFO] Subscriber connected to MQTT broker
+2025/07/22 02:09:02 main.go:44: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 02:09:02 main.go:44: [INFO] Subscriber waiting for telemetry...
+2025/07/22 02:09:12 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:09:12 main.go:44: [INFO] Collected system info
+2025/07/22 02:09:12 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:09:13 main.go:44: [INFO] Collected network stats
+2025/07/22 02:09:14 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:09:14 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:09:14 main.go:44: [INFO] Received telemetry message
+2025/07/22 02:09:14 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 02:09:22 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:09:22 main.go:44: [INFO] Collected system info
+2025/07/22 02:09:22 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:09:22 main.go:44: [INFO] Collected network stats
+2025/07/22 02:09:24 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:09:24 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:09:24 main.go:44: [INFO] Received telemetry message
+2025/07/22 02:09:24 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 02:09:32 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:09:32 main.go:44: [INFO] Collected system info
+2025/07/22 02:09:32 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:09:32 main.go:44: [INFO] Collected network stats
+2025/07/22 02:09:35 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:09:35 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:09:35 main.go:44: [INFO] Received telemetry message
+2025/07/22 02:09:35 main.go:44: [INFO] Telemetry published successfully
+2025/07/22 02:09:42 main.go:44: [INFO] Shutting down...
+2025/07/22 02:09:42 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:09:42 main.go:44: [INFO] Collected system info
+2025/07/22 02:09:42 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:09:42 main.go:44: [INFO] Collected network stats
+2025/07/22 02:09:44 main.go:44: [INFO] Collected 50 processes
+2025/07/22 02:09:44 main.go:44: [INFO] Collected critical files info
+2025/07/22 02:09:44 main.go:50: [ERROR] MQTT publish failed: not Connected
+2025/07/22 02:09:52 main.go:44: [INFO] Collecting and publishing telemetry
+2025/07/22 02:09:52 main.go:44: [INFO] Collected system info
+2025/07/22 02:09:53 main.go:44: [INFO] Collected hardware stats
+2025/07/22 02:09:53 main.go:44: [INFO] Collected network stats
+2025/07/22 22:55:53 main.go:97: [INFO] Starting telemetry system
+2025/07/22 22:55:53 main.go:97: [INFO] Runtime: Go go1.24.5
+2025/07/22 22:55:53 main.go:97: [INFO] Configuration loaded: {BrokerAddress:tcp://localhost:1883 MQTTTopic:telemetry/fullsystem CollectionInterval:10 MaxProcesses:50 CriticalFiles:[/etc/passwd /etc/hosts C:\Windows\System32\drivers\etc\hosts] LogFiles:{SystemLog:telemetry_system.log EventLog:telemetry_events.log}}
+2025/07/22 22:55:53 main.go:97: [INFO] Subscriber starting
+2025/07/22 22:55:53 main.go:97: [INFO] Publisher starting
+2025/07/22 22:55:53 main.go:109: [FATAL] MQTT connection failed: network Error : dial tcp [::1]:1883: connectex: No connection could be made because the target machine actively refused it.
+2025/07/22 22:55:53 main.go:109: [FATAL] Subscriber MQTT connection failed: network Error : dial tcp [::1]:1883: connectex: No connection could be made because the target machine actively refused it.
+2025/07/22 23:00:24 main.go:97: [INFO] Starting telemetry system
+2025/07/22 23:00:24 main.go:97: [INFO] Runtime: Go go1.24.5
+2025/07/22 23:00:24 main.go:97: [INFO] Configuration loaded: {BrokerAddress:tcp://localhost:1883 MQTTTopic:telemetry/fullsystem CollectionInterval:10 MaxProcesses:50 CriticalFiles:[/etc/passwd /etc/hosts C:\Windows\System32\drivers\etc\hosts] LogFiles:{SystemLog:telemetry_system.log EventLog:telemetry_events.log}}
+2025/07/22 23:00:24 main.go:97: [INFO] Publisher starting
+2025/07/22 23:00:24 main.go:97: [INFO] Subscriber starting
+2025/07/22 23:00:24 main.go:97: [INFO] Subscriber connected to MQTT broker
+2025/07/22 23:00:24 main.go:97: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 23:00:24 main.go:97: [INFO] Subscriber waiting for telemetry...
+2025/07/22 23:00:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:00:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:00:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:00:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:00:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:00:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:00:36 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:00:36 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:00:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:00:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:00:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:00:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:00:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:00:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:00:46 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:00:46 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:00:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:00:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:00:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:00:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:00:56 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:00:56 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:00:56 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:00:56 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:05 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:05 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:05 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:05 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:15 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:15 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:15 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:15 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:26 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:26 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:26 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:26 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:36 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:36 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:46 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:01:46 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:01:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:01:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:01:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:01:55 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:01:55 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:01:55 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:01:55 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:02:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:06 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:06 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:06 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:02:06 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:02:14 main.go:97: [INFO] Shutting down...
+2025/07/22 23:02:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:16 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:16 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:16 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:02:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:25 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:25 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:25 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:02:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:36 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:02:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:46 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:02:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:02:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:02:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:02:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:02:56 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:02:56 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:02:56 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:06 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:06 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:06 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:16 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:16 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:16 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:26 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:26 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:26 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:36 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:48 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:48 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:03:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:03:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:03:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:03:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:03:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:03:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:03:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:04:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:04:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:04:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:04:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:04:58 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:04:58 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:04:58 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:18 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:18 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:18 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:05:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:05:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:05:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:05:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:05:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:05:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:05:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:06 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:06 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:06 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:18 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:18 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:18 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:06:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:06:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:06:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:06:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:06:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:06:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:06:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:07:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:07:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:07:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:07:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:07:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:07:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:07:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:38 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:38 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:38 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:08:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:08:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:08:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:08:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:08:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:08:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:08:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:38 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:09:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:09:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:09:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:09:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:09:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:09:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:09:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:38 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:38 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:48 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:48 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:48 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:10:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:10:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:10:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:10:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:10:58 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:10:58 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:10:58 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:08 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:08 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:08 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:11:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:11:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:11:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:11:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:11:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:11:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:11:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:08 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:08 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:08 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:38 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:38 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:38 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:12:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:12:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:12:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:12:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:12:58 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:12:58 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:12:58 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:27 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:13:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:13:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:13:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:13:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:13:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:13:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:13:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:28 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:28 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:28 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:38 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:38 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:38 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:47 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:14:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:14:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:14:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:14:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:14:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:14:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:14:57 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:07 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:17 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:26 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:26 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:26 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:36 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:46 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:15:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:15:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:15:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:15:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:15:56 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:15:56 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:15:56 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:06 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:06 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:06 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:16 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:16 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:16 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:25 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:25 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:25 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:36 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:36 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:36 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:46 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:16:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:16:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:16:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:16:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:16:58 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:16:58 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:16:58 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:05 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:05 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:05 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:11 main.go:97: [INFO] Starting telemetry system
+2025/07/22 23:17:11 main.go:97: [INFO] Runtime: Go go1.24.5
+2025/07/22 23:17:11 main.go:97: [INFO] Configuration loaded: {BrokerAddress:tcp://localhost:1883 MQTTTopic:telemetry/fullsystem CollectionInterval:10 MaxProcesses:50 CriticalFiles:[/etc/passwd /etc/hosts C:\Windows\System32\drivers\etc\hosts] LogFiles:{SystemLog:telemetry_system.log EventLog:telemetry_events.log}}
+2025/07/22 23:17:11 main.go:97: [INFO] Subscriber starting
+2025/07/22 23:17:11 main.go:97: [INFO] Publisher starting
+2025/07/22 23:17:11 main.go:97: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 23:17:11 main.go:97: [INFO] Subscriber connected to MQTT broker
+2025/07/22 23:17:11 main.go:97: [INFO] Subscriber waiting for telemetry...
+2025/07/22 23:17:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:15 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:15 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:15 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:21 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:21 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:21 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:21 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:23 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:23 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:23 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:17:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:26 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:26 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:26 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:31 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:31 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:31 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:31 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:33 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:33 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:33 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:17:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:35 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:35 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:35 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:41 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:41 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:41 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:41 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:43 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:43 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:43 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:17:44 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:44 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:44 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:44 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:46 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:46 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:46 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:17:51 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:51 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:51 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:51 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:53 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:53 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:53 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:17:54 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:17:54 main.go:97: [INFO] Collected system info
+2025/07/22 23:17:54 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:17:54 main.go:97: [INFO] Collected network stats
+2025/07/22 23:17:56 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:17:56 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:17:56 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:18:01 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:01 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:01 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:01 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:03 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:03 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:03 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:18:04 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:04 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:04 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:04 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:06 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:06 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:06 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:18:11 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:11 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:11 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:11 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:13 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:13 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:13 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:18:14 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:14 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:14 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:14 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:16 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:16 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:16 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:18:21 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:21 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:21 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:21 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:23 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:23 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:23 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:18:24 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:24 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:24 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:24 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:26 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:26 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:26 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:18:31 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:31 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:31 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:31 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:33 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:33 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:33 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:18:34 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:18:34 main.go:97: [INFO] Collected system info
+2025/07/22 23:18:34 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:18:34 main.go:97: [INFO] Collected network stats
+2025/07/22 23:18:35 main.go:97: [INFO] Shutting down...
+2025/07/22 23:18:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:18:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:18:37 main.go:103: [ERROR] MQTT publish failed: not Connected
+2025/07/22 23:19:15 main.go:97: [INFO] Starting telemetry system
+2025/07/22 23:19:15 main.go:97: [INFO] Runtime: Go go1.24.5
+2025/07/22 23:19:15 main.go:97: [INFO] Configuration loaded: {BrokerAddress:tcp://localhost:1883 MQTTTopic:telemetry/fullsystem CollectionInterval:10 MaxProcesses:50 CriticalFiles:[/etc/passwd /etc/hosts C:\Windows\System32\drivers\etc\hosts] LogFiles:{SystemLog:telemetry_system.log EventLog:telemetry_events.log}}
+2025/07/22 23:19:15 main.go:97: [INFO] Subscriber starting
+2025/07/22 23:19:15 main.go:97: [INFO] Publisher starting
+2025/07/22 23:19:15 main.go:97: [INFO] Connected to MQTT broker at tcp://localhost:1883
+2025/07/22 23:19:15 main.go:97: [INFO] Subscriber connected to MQTT broker
+2025/07/22 23:19:15 main.go:97: [INFO] Subscriber waiting for telemetry...
+2025/07/22 23:19:25 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:19:25 main.go:97: [INFO] Collected system info
+2025/07/22 23:19:25 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:19:25 main.go:97: [INFO] Collected network stats
+2025/07/22 23:19:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:19:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:19:27 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:19:27 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:19:35 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:19:35 main.go:97: [INFO] Collected system info
+2025/07/22 23:19:35 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:19:35 main.go:97: [INFO] Collected network stats
+2025/07/22 23:19:37 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:19:37 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:19:37 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:19:37 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:19:45 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:19:45 main.go:97: [INFO] Collected system info
+2025/07/22 23:19:45 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:19:45 main.go:97: [INFO] Collected network stats
+2025/07/22 23:19:47 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:19:47 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:19:47 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:19:47 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:19:55 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:19:55 main.go:97: [INFO] Collected system info
+2025/07/22 23:19:55 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:19:55 main.go:97: [INFO] Collected network stats
+2025/07/22 23:19:57 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:19:57 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:19:57 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:19:57 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:20:05 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:20:05 main.go:97: [INFO] Collected system info
+2025/07/22 23:20:05 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:20:05 main.go:97: [INFO] Collected network stats
+2025/07/22 23:20:07 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:20:07 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:20:07 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:20:07 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:20:15 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:20:15 main.go:97: [INFO] Collected system info
+2025/07/22 23:20:15 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:20:15 main.go:97: [INFO] Collected network stats
+2025/07/22 23:20:17 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:20:17 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:20:17 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:20:17 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:20:25 main.go:97: [INFO] Collecting and publishing telemetry
+2025/07/22 23:20:25 main.go:97: [INFO] Collected system info
+2025/07/22 23:20:25 main.go:97: [INFO] Collected hardware stats
+2025/07/22 23:20:25 main.go:97: [INFO] Collected network stats
+2025/07/22 23:20:27 main.go:97: [INFO] Collected 50 processes
+2025/07/22 23:20:27 main.go:97: [INFO] Collected critical files info
+2025/07/22 23:20:27 main.go:97: [INFO] Received telemetry message
+2025/07/22 23:20:27 main.go:97: [INFO] Telemetry published successfully
+2025/07/22 23:20:29 main.go:97: [INFO] Shutting down...
