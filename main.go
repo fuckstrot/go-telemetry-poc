@@ -696,7 +696,7 @@ func printTelemetryReport(data SystemTelemetry) {
 				fmt.Sprintf("↑%s↓%s", formatBytes(p.IOWriteBytes), formatBytes(p.IOReadBytes)),
 				p.Status)
 		}
-	}
+	} //test
 
 	// Critical Files
 	if len(data.CriticalFiles) > 0 {
